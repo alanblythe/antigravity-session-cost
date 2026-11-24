@@ -1,0 +1,13 @@
+project_id       = "your-gcp-project-id"
+bucket_name      = "your-org-antigravity-rate-cards"
+region           = "us-central1"
+object_name      = "rate_card.json"
+rate_card_source = "../skills/antigravity-session-cost/config/rate_card.json"
+
+reader_members = [
+  "group:eng@example.com",
+  # "user:dev@example.com",
+  # "serviceAccount:workstation-sync@your-gcp-project-id.iam.gserviceaccount.com",
+]
+
+force_destroy = false

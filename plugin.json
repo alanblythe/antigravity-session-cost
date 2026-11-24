@@ -1,0 +1,5 @@
+{
+  "name": "antigravity-session-cost",
+  "version": "1.0.0",
+  "description": "Local recursive session cost statusLine, historical spend reports, and private GCS/HTTPS ETag rate-card sync for Antigravity CLI."
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-11-23",
+  "currency": "USD",
+  "source": "Vertex AI public list prices (per 1M tokens, USD)",
+  "global_discount_pct": 0.0,
+  "default_tier_threshold_tokens": 200000,
+  "models": {
+    "gemini-4-argon": {
+      "match": ["gemini-4-argon", "4-argon"],
+      "input": 2.00,
+      "output": 10.00,
+      "cache_read": 0.10,
+      "gt_200k_input": 4.00,
+      "gt_200k_output": 15.00,
+      "gt_200k_cache_read": 0.20
+    },
+    "gemini-4-carbon": {
+      "match": ["gemini-4-carbon", "4-carbon"],
+      "input": 2.00,
+      "output": 10.00,
+      "cache_read": 0.10,
+      "gt_200k_input": 4.00,
+      "gt_200k_output": 15.00,
+      "gt_200k_cache_read": 0.20
+    },
+    "gemini-4-hydrogen": {
+      "match": ["gemini-4-hydrogen", "4-hydrogen"],
+      "input": 1.50,
+      "output": 7.50,
+      "cache_read": 0.075,
+      "gt_200k_input": 3.00,
+      "gt_200k_output": 11.25,
+      "gt_200k_cache_read": 0.15
+    },
+    "gemini-4-neon": {
+      "match": ["gemini-4-neon", "4-neon"],
+      "input": 3.00,
+      "output": 15.00,
+      "cache_read": 0.15,
+      "gt_200k_input": 6.00,
+      "gt_200k_output": 22.50,
+      "gt_200k_cache_read": 0.30
+    },
+    "gemini-3.1-pro": {
+      "match": ["gemini-3.1-pro", "gemini-3-pro", "3.1-pro", "3-pro"],
+      "input": 2.00,
+      "output": 12.00,
+      "cache_read": 0.20,
+      "gt_200k_input": 4.00,
+      "gt_200k_output": 18.00,
+      "gt_200k_cache_read": 0.40
+    },
+    "gemini-3.8-flash": {
+      "match": ["gemini-3.8-flash", "3.8-flash"],
+      "input": 0.75,
+      "output": 3.75,
+      "cache_read": 0.075
+    },
+    "gemini-3.5-flash": {
+      "match": ["gemini-3.5-flash", "3.5-flash"],
+      "input": 1.50,
+      "output": 9.00,
+      "cache_read": 0.15
+    },
+    "gemini-3-flash": {
+      "match": ["gemini-3-flash", "3-flash"],
+      "input": 0.50,
+      "output": 3.00,
+      "cache_read": 0.05
+    },
+    "gemini-2.5-pro": {
+      "match": ["gemini-2.5-pro", "2.5-pro"],
+      "input": 1.25,
+      "output": 10.00,
+      "cache_read": 0.3125,
+      "gt_200k_input": 2.50,
+      "gt_200k_output": 15.00,
+      "gt_200k_cache_read": 0.625
+    },
+    "gemini-2.5-flash": {
+      "match": ["gemini-2.5-flash", "2.5-flash"],
+      "input": 0.30,
+      "output": 2.50,
+      "cache_read": 0.075
+    },
+    "claude-sonnet": {
+      "match": ["claude-sonnet", "sonnet"],
+      "input": 3.00,
+      "output": 15.00,
+      "cache_read": 0.30
+    },
+    "claude-opus": {
+      "match": ["claude-opus", "opus"],
+      "input": 5.00,
+      "output": 25.00,
+      "cache_read": 0.50
+    },
+    "claude-haiku": {
+      "match": ["claude-haiku", "haiku"],
+      "input": 1.00,
+      "output": 5.00,
+      "cache_read": 0.10
+    },
+    "default_fallback": {
+      "match": ["*"],
+      "input": 2.00,
+      "output": 10.00,
+      "cache_read": 0.10
+    }
+  },
+  "overrides": {}
+}
