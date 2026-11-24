@@ -85,7 +85,30 @@ Antigravity CLI records per-step token telemetry (`input_tokens`, `cache_read_to
 
 ## Quick Start
 
-### Option A: Install as a Skill (`npx skills add`)
+### Option A: Install as an Antigravity CLI Plugin (`agy plugin install`, Recommended)
+
+Install the plugin, then wire `statusLine` directly with `install.sh` (avoids agent permission prompts and token spend):
+
+```bash
+agy plugin install https://github.com/alanblythe/antigravity-session-cost
+
+# Standalone statusLine (if you do not have an existing statusLine):
+~/.gemini/config/plugins/antigravity-session-cost/scripts/install.sh --mode standalone
+
+# Or wrap an existing statusLine without modifying it:
+~/.gemini/config/plugins/antigravity-session-cost/scripts/install.sh --mode wrapper
+
+# Optional: apply a negotiated discount (e.g. 15%) or custom --gemini-dir
+~/.gemini/config/plugins/antigravity-session-cost/scripts/install.sh --mode standalone --discount-pct 15
+```
+
+*(Optional)* Instead of running `install.sh`, you can ask Antigravity CLI (`agy`) to audit and configure your `statusLine` interactively:
+
+```text
+Set up antigravity-session-cost for my statusLine and apply a 15% discount.
+```
+
+### Option B: Install as a Skill (`npx skills add`)
 
 Install the self-contained skill directly into Antigravity CLI:
 
@@ -94,13 +117,12 @@ npx skills add alanblythe/antigravity-session-cost --agent antigravity
 ```
 
 Then ask Antigravity CLI (`agy`):
-> "Set up antigravity-session-cost for my statusLine and apply a 15% discount."
 
-### Option B: Install as an Antigravity CLI Plugin (`agy plugin install`)
-
-```bash
-agy plugin install https://github.com/alanblythe/antigravity-session-cost
+```text
+Set up antigravity-session-cost for my statusLine and apply a 15% discount.
 ```
+
+> **Note:** If Antigravity CLI prompts for or blocks permissions when editing `~/.gemini/antigravity-cli/settings.json`, use **Option A** with `install.sh`, or set `statusLine.command` manually to `~/.gemini/config/skills/antigravity-session-cost/scripts/statusline_standalone.sh` (or `statusline_wrapper.sh`).
 
 ### Option C: Clone & Local Installer (`git clone` + `./scripts/install.sh`)
 
